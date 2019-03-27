@@ -21,3 +21,7 @@ function doPointlessComputationsWithBlocking() {
   const primes = calculatePrimes(50, 100000000000);
   console.log(primes);
 }
+
+self.onmessage = () => {
+  doPointlessComputationsWithBlocking();
+};
