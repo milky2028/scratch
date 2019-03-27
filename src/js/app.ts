@@ -1,7 +1,7 @@
 const iterations = 50;
 const multiplier = 1000000000;
 
-function calculatePrimes(iterations, multiplier) {
+function calculatePrimes(iterations: number, multiplier: number) {
   var primes = [];
   for (var i = 0; i < iterations; i++) {
     var candidate = i * (multiplier * Math.random());
@@ -26,8 +26,8 @@ function doPointlessComputationsWithBlocking() {
 }
 
 // function shapeShiftBox() {
-//   const box = document.querySelector('#rect');
-//   box.style.height = Math.floor(Math.random() * 700);
+//   const box = <HTMLElement>document.querySelector('#box');
+//   box.style.height = `${Math.floor(Math.random() * 700)}px`;
 // }
 
 // setTimeout(() => {
