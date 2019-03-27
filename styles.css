@@ -1,0 +1,14 @@
+#app {
+  box-sizing: border-box;
+  height: 98vh;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+#rectangle {
+  width: 500px;
+  height: 500px;
+  background-color: blueviolet;
+}
