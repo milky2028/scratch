@@ -14,6 +14,8 @@ body {
   font-family: sans-serif;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(10, 1fr);
+  /* grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(60px, 1fr)); */
 }
 
 .box {
