@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>works</p>
+    <button id="wkr">Worker button</button>
+    <script type="module">
+      const worker = new Worker('./worker.js');
+
+      const wkr = document.querySelector('#wkr');
+      wkr.addEventListener('click', () => {
+        worker.postMessage({ fn: 'thingTwo' });
+      });
+
+      worker.addEventListener('message', (msg) => {
+        console.log(msg.data);
+      });
+    </script>
+  </body>
+</html>
