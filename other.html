@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="h">Some header</h1>
+    <p id="json"></p>
+    <script type="module">
+      const $ = (id) => document.getElementById(id);
+      const h1 = $('h');
+
+      const animation = h1.animate([{ opacity: 0 }, { opacity: 1 }], {
+        duration: 150,
+      });
+
+      $('json').innerText = JSON.stringify(animation);
+      console.log(animation);
+    </script>
+  </body>
+</html>
